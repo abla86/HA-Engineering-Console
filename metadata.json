@@ -1,0 +1,8 @@
+{
+  "name": "HA Engineering Console",
+  "description": "Lokal-first ingeniørkonsoll for diagnostisering, konfigurering, optimalisering og trygg administrasjon av Home Assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
