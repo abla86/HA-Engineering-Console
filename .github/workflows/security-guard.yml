@@ -13,8 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: {node-version: 22}
-      - name: Install and verify npm projects
+        with:
+          node-version: 22
+      - name: Verify all npm projects
         shell: bash
         run: |
           set -e
