@@ -94,3 +94,23 @@ Prosjektet er organisert i en ren monorepo-struktur:
 2. **PROPOSE:** Genererer forslag, beregner diff og risiko, men gjør ingen endringer.
 3. **APPLY_SAFE:** Krever to-trinns bekreftelse fra bruker, utfører automatisk validering og tar backup før skriving.
 4. **ADVANCED:** Reservert for kjerneomstart og destruktive handlinger. Utføres aldri automatisk.
+
+
+## Publication boundary
+
+This repository is a technical portfolio demonstration. The default security mode is read-only and write operations require explicit user confirmation. The project does not claim that a configured Home Assistant instance, hardware environment or external deployment has been verified merely because connection profiles or configuration templates exist.
+
+Use synthetic or non-sensitive demonstration data when publishing screenshots, logs or reports. Never commit Home Assistant tokens, passwords, private URLs, GPS coordinates or personal data.
+
+## Verification
+
+The publication CI workflow runs:
+
+```bash
+npm install
+npm run lint
+npm test
+npm run build
+```
+
+External Home Assistant integration is not required for the static CI verification.
