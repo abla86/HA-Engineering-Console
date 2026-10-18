@@ -21,7 +21,7 @@
     "js-yaml": "^5.4.2",
     "jszip": "^3.10.2",
     "lucide-react": "^0.546.0",
-    "motion": "^14.0.0",
+    "motion": "^14.3.0",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
     "recharts": "^3.10.1",
