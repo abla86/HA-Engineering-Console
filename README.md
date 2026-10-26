@@ -114,3 +114,12 @@ npm run build
 ```
 
 External Home Assistant integration is not required for the static CI verification.
+
+
+## Disclaimers and limitations
+
+- **Project status:** Features may be incomplete, experimental, or unverified. Confirm behavior against the current code, tests, and configuration before relying on it.
+- **No warranty:** Provided as-is, without guarantees of correctness, availability, security, or production readiness. Review and test changes before production use.
+- **Security and data:** Never commit credentials, API keys, personal information, or confidential data. Review permissions, external services, logging, retention, and dependency risks. Automated checks are not a complete security audit.
+- **Testing and deployment:** Passing tests or static checks does not prove all behavior is correct or deployment is safe. Verify functionality, access controls, dependencies, backups, monitoring, and operational requirements independently.
+- **Domain-specific limitation:** Automation and device-control examples must be tested against the actual Home Assistant version, integrations, entities and hardware. A successful configuration check does not prove a physical device will respond or that the automation is safe.
