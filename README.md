@@ -8,7 +8,7 @@ Lokal-first ingeniørkonsoll for diagnostisering, konfigurering, optimalisering 
   - Full støtte for både live Home Assistant (REST API & WebSocket) og forhåndsdefinerte laboratorieprofiler (Home Assistant Green, CasaOS Container, Raspberry Pi 4 Core, Home Assistant Yellow Matter).
   - Automatisk deteksjon av installasjonstype og kapabilitetsmatrise (Supervisor, Backups, Shell, Zigbee, Z-Wave, Hardware Telemetri).
   - TLS-analyse med advarsel ved usikker HTTP-overføring over eksterne nettverk.
-  - Sikker, obfuskert lokal lagring av autentiseringstokens i nettleseren.
+  - Lokal lagring av tilkoblingsadresse og profilinnstillinger; Home Assistant-tilgangstoken holdes kun i minnet og lagres ikke i nettleseren.
 
 - **System Doctor:**
   - Evidensbasert analyse av kjerne, operativsystem, maskinvare og sensorer.
