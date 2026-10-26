@@ -47,18 +47,23 @@ export const ConnectionCenter: React.FC<ConnectionCenterProps> = ({
   } | null>(null);
 
   useEffect(() => {
-    // Load persisted connection settings from obfuscated localStorage if available
+    // Load non-secret connection settings only. Never persist Home Assistant tokens:
+    // base64/obfuscation is not encryption and localStorage is readable by page scripts.
     try {
       const saved = localStorage.getItem('ha_console_conn');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed.url) setLiveUrl(parsed.url);
-        if (parsed.token) setToken(atob(parsed.token));
         if (parsed.mode) setMode(parsed.mode);
         if (parsed.mockProfile) setSelectedMockProfile(parsed.mockProfile);
+
+        if (Object.prototype.hasOwnProperty.call(parsed, 'token')) {
+          delete parsed.token;
+          localStorage.setItem('ha_console_conn', JSON.stringify(parsed));
+        }
       }
     } catch {
-      // Ignore
+      // Ignore malformed or unavailable local settings.
     }
   }, []);
 
@@ -88,7 +93,6 @@ export const ConnectionCenter: React.FC<ConnectionCenterProps> = ({
               'ha_console_conn',
               JSON.stringify({
                 url: liveUrl,
-                token: token ? btoa(token) : '',
                 mode,
                 mockProfile: selectedMockProfile,
               })
