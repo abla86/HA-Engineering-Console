@@ -281,7 +281,7 @@ export const ConnectionCenter: React.FC<ConnectionCenterProps> = ({
                 className="rounded bg-slate-900 border-slate-700 text-cyan-500 focus:ring-0 cursor-pointer"
               />
               <label htmlFor="remember" className="text-xs text-slate-400 cursor-pointer select-none">
-                Husk tilkoblingsdetaljer lokalt i denne nettleseren (lagres obfuskert i localStorage)
+                Husk tilkoblingsdetaljer lokalt (tilgangstoken lagres ikke)
               </label>
             </div>
           </div>
